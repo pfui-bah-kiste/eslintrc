@@ -6,9 +6,13 @@ Rules selection subject to practicality and personal taste.
 
 ### Install
 
-Add this repository as a git submodule to your project:
+Add this repository as a git submodule to your root repository:
 ```bash
+# the typescript project is the root repository
 git submodule add https://github.com/pfui-bah-kiste/eslintrc.git
+
+# the typescript project is within a subfolder of the root repository, e.g. server
+git submodule add https://github.com/pfui-bah-kiste/eslintrc.git server/eslintrc
 ```
 
 ### Configure
