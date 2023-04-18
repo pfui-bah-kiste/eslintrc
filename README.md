@@ -9,8 +9,6 @@ Rules selection subject to practicality and personal taste.
 Add this repository as a git submodule to your project:
 ```bash
 git submodule add https://github.com/pfui-bah-kiste/eslintrc.git
-
-444 Remove the fllowing line is unsafe
 ```
 
 ### Configure
