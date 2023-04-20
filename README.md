@@ -2,9 +2,9 @@
 This projects maintains a curated list of eslint rules for typescript projects.
 Rules selection subject to practicality and personal taste.
 
-## Usage
+## Install
 
-### Install
+### git
 
 Add this repository as a git submodule to your root repository:
 ```bash
@@ -15,23 +15,28 @@ git submodule add https://github.com/pfui-bah-kiste/eslintrc.git
 git submodule add https://github.com/pfui-bah-kiste/eslintrc.git server/eslintrc
 ```
 
-### Configure
+### vscode
 
-Add the following dev dependencies to your package.json file:
-- ```"@typescript-eslint/eslint-plugin": "5.58.0"```
-- ```"@typescript-eslint/parser": "5.58.0"```
-- ```"eslint": "8.38.0"```
-- ```"eslint-plugin-jsdoc": "41.1.1"```
+Install extension:
+```ESLint (v2.4.0)```
 
-Create an ```.eslintrc.json``` file in the root of your typescript project with the following content:
+## Configure
+
+Add the following ```devDependencies``` to the ```package.json``` file:
+```json
+"@typescript-eslint/eslint-plugin": "5.58.0"
+"@typescript-eslint/parser": "5.58.0"
+"eslint": "8.38.0"
+"eslint-plugin-jsdoc": "41.1.1"
+```
+
+
+In the root of the typescript project,
+
+* create the ```.eslintrc.json``` file with the following content:
 ```json
 {
     "root": true,
-    "env": {
-        "browser": true,
-        "node": true,
-        "es6": true
-    },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "project": "tsconfig.json"
@@ -43,5 +48,36 @@ Create an ```.eslintrc.json``` file in the root of your typescript project with 
     "extends": [
         "./eslintrc/.eslintrc.json"
     ]
+}
+```
+
+* append the following content to the ```tsconfig.json``` file:
+```json
+// The rules below are consistent
+// with the enabled eslint rules.
+
+"compilerOptions": {
+    // [...]
+
+    /* Type Checking */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    // "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    // "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    // "allowUnusedLabels": true,
+    // "allowUnreachableCode": true,
 }
 ```
