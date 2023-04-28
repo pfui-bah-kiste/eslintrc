@@ -33,10 +33,14 @@ Add the following ```devDependencies``` to the ```package.json``` file. The spec
 
 In the root of the typescript project,
 
-* create the ```.eslintrc.json``` file with the following content:
+* create the ```.eslintrc.json``` file with the following content (set "env" according to the execution environment):
 ```json
 {
     "root": true,
+    "env": {
+        "browser": true,
+        "node": false
+    },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "project": "tsconfig.json"
