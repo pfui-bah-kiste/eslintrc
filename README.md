@@ -8,10 +8,10 @@ Rule selection is subject to practicality, personal taste and inter-operability 
 
 Add this repository as a git submodule to your root repository:
 ```bash
-# the typescript project is the root repository
+# if the typescript project is the root repository, run:
 git submodule add https://github.com/pfui-bah-kiste/eslintrc.git
 
-# the typescript project is within a subfolder of the root repository, e.g. server
+# if the typescript project is within a subfolder of the root repository, e.g. server, run:
 git submodule add https://github.com/pfui-bah-kiste/eslintrc.git server/eslintrc
 ```
 
@@ -54,7 +54,7 @@ In the root of the typescript project,
 * append the following content to the ```tsconfig.json``` file:
 ```javascript
 // The rules below are consistent with the list of enabled eslint rules.
-// To create a new tsconfig.json file execute the command 'tsc --init'.
+// To create a new tsconfig.json file, execute the command 'tsc --init'.
 
 "compilerOptions": {
     // [...]
