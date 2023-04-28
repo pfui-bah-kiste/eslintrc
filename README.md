@@ -53,8 +53,8 @@ In the root of the typescript project,
 
 * append the following content to the ```tsconfig.json``` file:
 ```javascript
-// The rules below are consistent
-// with the enabled eslint rules.
+// The rules below are consistent with the list of enabled eslint rules.
+// To create a new tsconfig.json file execute the command 'tsc --init'.
 
 "compilerOptions": {
     // [...]
