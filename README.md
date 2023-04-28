@@ -1,6 +1,6 @@
 # eslintrc
 This projects maintains a curated list of eslint rules for typescript projects.
-Rules selection subject to practicality and personal taste.
+Rule selection is subject to practicality, personal taste and inter-operability with built-in typescript rules.
 
 ## Install
 
@@ -22,7 +22,7 @@ Install extension:
 
 ## Configure
 
-Add the following ```devDependencies``` to the ```package.json``` file:
+Add the following ```devDependencies``` to the ```package.json``` file. The specific versions will be regularly updated once possible rule changes/additions/deprecations have been verified and integrated into the list. 
 ```json
 "@typescript-eslint/eslint-plugin": "5.58.0"
 "@typescript-eslint/parser": "5.58.0"
@@ -52,7 +52,7 @@ In the root of the typescript project,
 ```
 
 * append the following content to the ```tsconfig.json``` file:
-```json
+```javascript
 // The rules below are consistent
 // with the enabled eslint rules.
 
