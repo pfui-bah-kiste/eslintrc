@@ -4,39 +4,47 @@ Rule selection is subject to practicality, personal taste and inter-operability 
 
 ## Install
 
-### git
+### GIT
 
 Add this repository as a git submodule to your root repository:
 ```bash
 # if the typescript project is the root repository, run:
 git submodule add https://github.com/pfui-bah-kiste/eslintrc.git
 
-# if the typescript project is within a subfolder of the root repository, e.g. server, run:
+# if the typescript project is within a sub-directory of the root repository, e.g. server, run:
 git submodule add https://github.com/pfui-bah-kiste/eslintrc.git server/eslintrc
 ```
 
-### vscode
+### Non-GIT
+
+Copy the ```.eslintrc.json``` file into a new directory named ```eslintrc``` inside the root project directory (or a any sub-directory thereof, e.g. server).
+
+### VS Code
 
 Install extension:
-```ESLint (v2.4.0)```
+```ESLint (Author: Microsoft)```
 
 ## Configure
 
+### Node Modules
+
 Add the following ```devDependencies``` to the ```package.json``` file. The specific versions will be regularly updated once possible rule changes/additions/deprecations have been verified and integrated into the list. 
 ```json
-"@typescript-eslint/eslint-plugin": "5.58.0"
-"@typescript-eslint/parser": "5.58.0"
-"eslint": "8.38.0"
-"eslint-plugin-jsdoc": "41.1.1"
+"@typescript-eslint/eslint-plugin": "5.58.0",
+"@typescript-eslint/parser": "5.58.0",
+"eslint": "8.38.0",
+"eslint-plugin-jsdoc": "41.1.1",
 ```
 
+### ESLint and TSConfig
 
 In the root of the typescript project,
 
-* create the ```.eslintrc.json``` file with the following content (set "env" according to the execution environment):
-```json
+* create the ```.eslintrc.json``` file with the following content:
+```javascript
 {
     "root": true,
+    // NOTE: adjust environment according to the runtime the project will be executed in
     "env": {
         "browser": true,
         "node": false
@@ -50,6 +58,7 @@ In the root of the typescript project,
         "eslint-plugin-jsdoc"
     ],
     "extends": [
+        // NOTE: adjust path according to the chosen directory structure
         "./eslintrc/.eslintrc.json"
     ]
 }
@@ -84,4 +93,17 @@ In the root of the typescript project,
     // "allowUnusedLabels": true,
     // "allowUnreachableCode": true,
 }
+```
+
+__Hint:__ In order to exclude some files and/or folders from the linter,
+* add them to the ```exclude``` section inside the ```tsconfig.json``` file:
+
+```json
+"exclude": [ "node_modules", "dist" ]
+```
+
+* as well as to the ```ignorePatterns``` section of the ```.eslintrc.json``` file:
+
+```json
+"ignorePatterns": [ "node_modules", "dist" ]
 ```
