@@ -17,7 +17,7 @@ git submodule add https://github.com/pfui-bah-kiste/eslintrc.git server/eslintrc
 
 To update the submodule to the latest version, run:
 ```bash
-git submodule update --recursive --remote
+git submodule update --recursive --remote --merge
 ```
 
 ### Non-GIT
