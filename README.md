@@ -15,6 +15,11 @@ git submodule add https://github.com/pfui-bah-kiste/eslintrc.git
 git submodule add https://github.com/pfui-bah-kiste/eslintrc.git server/eslintrc
 ```
 
+To update the submodule to the latest version, run:
+```bash
+git submodule update --recursive --remote
+```
+
 ### Non-GIT
 
 Copy the ```.eslintrc.json``` file into a new directory named ```eslintrc``` inside the root project directory (or a any sub-directory thereof, e.g. server).
