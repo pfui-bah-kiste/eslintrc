@@ -103,15 +103,15 @@ In the root of the typescript project,
 }
 ```
 
-__Hint:__ In order to exclude some files and/or folders from the linter,
+__Hint:__ In order to exclude some files and/or directories (e.g. the dist/ directory) from the linter,
 * add them to the ```exclude``` section inside the ```tsconfig.json``` file:
 
 ```json
-"exclude": [ "node_modules", "dist" ]
+"exclude": [ "dist/" ]
 ```
 
 * as well as to the ```ignorePatterns``` section of the ```.eslintrc.json``` file:
 
 ```json
-"ignorePatterns": [ "node_modules", "dist" ]
+"ignorePatterns": [ "dist/" ]
 ```
