@@ -28,12 +28,15 @@ Install extension:
 
 ### Node Modules
 
-Add the following ```devDependencies``` to the ```package.json``` file. The specific versions will be regularly updated once possible rule changes/additions/deprecations have been verified and integrated into the list. 
+Add the following ```devDependencies``` to the ```package.json``` file. The specific versions will be regularly updated once possible rule changes/additions/deprecations have been verified and integrated into the list.
+
+__Hint:__ After updating these versions, make sure to run ```npm install``` and restart VS Code for eslint to pick any rule changes.
+
 ```json
-"@typescript-eslint/eslint-plugin": "5.58.0",
-"@typescript-eslint/parser": "5.58.0",
-"eslint": "8.38.0",
-"eslint-plugin-jsdoc": "41.1.1",
+"@typescript-eslint/eslint-plugin": "5.59.1",
+"@typescript-eslint/parser": "5.59.1",
+"eslint": "8.39.0",
+"eslint-plugin-jsdoc": "43.1.1",
 ```
 
 ### ESLint and TSConfig
