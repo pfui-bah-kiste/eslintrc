@@ -38,10 +38,10 @@ Add the following ```devDependencies``` to the ```package.json``` file. The spec
 __Hint:__ After updating these versions, make sure to run ```npm install``` and restart VS Code for eslint to pick any rule changes.
 
 ```json
-"@typescript-eslint/eslint-plugin": "5.59.1",
-"@typescript-eslint/parser": "5.59.1",
-"eslint": "8.39.0",
-"eslint-plugin-jsdoc": "43.1.1",
+"@typescript-eslint/eslint-plugin": "6.5.0",
+"@typescript-eslint/parser": "6.5.0",
+"eslint": "8.48.0",
+"eslint-plugin-jsdoc": "46.5.0",
 ```
 
 ### ESLint and TSConfig
