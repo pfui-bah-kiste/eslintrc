@@ -1,8 +1,12 @@
 {
     "rules": {
-        // --------------------------------------------------------------------------------------------------------------------------------
-        // jsdoc | https://github.com/gajus/eslint-plugin-jsdoc
-        // --------------------------------------------------------------------------------------------------------------------------------
+
+        /**
+         * jsdoc
+         * @description: rules for the eslint plugin jsdoc
+         * @see: https://github.com/gajus/eslint-plugin-jsdoc
+         */
+
         "jsdoc/check-access": "warn",                                                                   // recommended
         "jsdoc/check-alignment": "warn",                                                                // recommended
         // "jsdoc/check-examples": "warn",
@@ -56,9 +60,12 @@
         // "jsdoc/text-escaping": "warn",
         // "jsdoc/valid-types": "warn",                                                                 // recommended
 
-        // --------------------------------------------------------------------------------------------------------------------------------
-        // typescript: supported rules | https://typescript-eslint.io/rules/#supported-rules
-        // --------------------------------------------------------------------------------------------------------------------------------
+        /**
+         * typescript
+         * @description: rules for typescript
+         * @see: https://typescript-eslint.io/rules/#supported-rules
+         */
+
         "@typescript-eslint/adjacent-overload-signatures": "warn",
         "@typescript-eslint/array-type": "warn",
         "@typescript-eslint/await-thenable": "error",                                                   // recommended
@@ -148,13 +155,16 @@
         "@typescript-eslint/switch-exhaustiveness-check": "warn",
         "@typescript-eslint/triple-slash-reference": "error",                                           // recommended
         "@typescript-eslint/type-annotation-spacing": "warn",
-        // "@typescript-eslint/typedef": "warn"
+        // "@typescript-eslint/typedef": "warn",
         "@typescript-eslint/unbound-method": ["error", {"ignoreStatic": true}],                         // recommended
         "@typescript-eslint/unified-signatures": "warn",
 
-        // --------------------------------------------------------------------------------------------------------------------------------
-        // typescript: extension rules | https://typescript-eslint.io/rules/#extension-rules
-        // --------------------------------------------------------------------------------------------------------------------------------
+        /**
+         * typescript
+         * @description: rules for typescript as extensions of existing eslint rules
+         * @see: https://typescript-eslint.io/rules/#extension-rules
+         */
+
         "@typescript-eslint/block-spacing": "warn",
         "@typescript-eslint/brace-style": "warn",
         // "@typescript-eslint/class-methods-use-this": "warn",
@@ -197,9 +207,12 @@
         "@typescript-eslint/space-before-function-paren": ["warn", "never"],
         "@typescript-eslint/space-infix-ops": "warn",
 
-        // --------------------------------------------------------------------------------------------------------------------------------
-        // eslint: possible problems | https://eslint.org/docs/latest/rules/#possible-problems
-        // --------------------------------------------------------------------------------------------------------------------------------
+        /**
+         * eslint
+         * @description: rules related to possible logic errors
+         * @see: https://eslint.org/docs/latest/rules/#possible-problems
+         */
+
         "array-callback-return": "error",
         "constructor-super": "error",                                                                   // recommended
         "for-direction": "error",                                                                       // recommended
@@ -259,9 +272,12 @@
         "use-isnan": "error",                                                                           // recommended
         "valid-typeof": "error",                                                                        // recommended
 
-        // --------------------------------------------------------------------------------------------------------------------------------
-        // eslint: suggestions | https://eslint.org/docs/latest/rules/#suggestions
-        // --------------------------------------------------------------------------------------------------------------------------------
+        /**
+         * eslint
+         * @description: rules suggesting alternate ways of doing things
+         * @see: https://eslint.org/docs/latest/rules/#suggestions
+         */
+
         "accessor-pairs": "warn",
         "arrow-body-style": "warn",
         "block-scoped-var": "error",
@@ -386,7 +402,7 @@
         "prefer-const": "warn",
         // "prefer-destructuring": "warn",
         // "prefer-exponentiation-operator": "warn",
-        // "prefer-named-capture-group": "warn"
+        // "prefer-named-capture-group": "warn",
         // "prefer-numeric-literals": "warn",
         // "prefer-object-has-own": "warn",
         // "prefer-object-spread": "warn",
@@ -409,9 +425,12 @@
         // "vars-on-top": "warn",
         "yoda": ["warn", "never", {"exceptRange": true}],
 
-        // --------------------------------------------------------------------------------------------------------------------------------
-        // eslint: layout and formatting | https://eslint.org/docs/latest/rules/#layout--formatting
-        // --------------------------------------------------------------------------------------------------------------------------------
+        /**
+         * eslint
+         * @description: rules caring about how the code looks rather than how it executes
+         * @see: https://eslint.org/docs/latest/rules/#layout--formatting
+         */
+
         // "array-bracket-newline": "warn",
         "array-bracket-spacing": "warn",
         // "array-element-newline": "warn",
@@ -433,7 +452,7 @@
         // "indent": "warn", EXTENDED
         // "jsx-quotes": "warn",
         // "key-spacing": "warn", EXTENDED
-        // "keyword-spacing": "warn" EXTENDED
+        // "keyword-spacing": "warn", EXTENDED
         // "line-comment-position": "warn",
         "linebreak-style": "warn",
         // "lines-around-comment" : "warn", EXTENDED
@@ -471,8 +490,15 @@
         "template-curly-spacing": "warn",
         "template-tag-spacing": "warn",
         "unicode-bom": "error",
-        "wrap-iife": "warn"
+        "wrap-iife": "warn",
         // "wrap-regex": "warn",
-        // "yield-star-spacing": "warn"
+        // "yield-star-spacing": "warn",
+
+        /**
+         * last
+         * @description: dummy rule, to avoid dealing with trailing commas above
+         */
+
+        "": "off"
     }
 }
