@@ -74,7 +74,7 @@
         "@typescript-eslint/ban-types": ["error", {"types": {"object": false}}],                        // recommended
         "@typescript-eslint/class-literal-property-style": "warn",
         "@typescript-eslint/consistent-generic-constructors": "warn",
-        "@typescript-eslint/consistent-indexed-object-style": "warn",
+        // "@typescript-eslint/consistent-indexed-object-style": "warn",
         "@typescript-eslint/consistent-type-assertions": "warn",
         "@typescript-eslint/consistent-type-definitions": "warn",
         "@typescript-eslint/consistent-type-exports": "warn",
@@ -82,7 +82,6 @@
         "@typescript-eslint/explicit-function-return-type": "warn",
         "@typescript-eslint/explicit-member-accessibility": ["warn", {"accessibility": "no-public"}],
         "@typescript-eslint/explicit-module-boundary-types": "error",
-        "@typescript-eslint/member-delimiter-style": "warn",
         // "@typescript-eslint/member-ordering": "warn",
         "@typescript-eslint/method-signature-style": "warn",
         // "@typescript-eslint/naming-convention": "warn",
@@ -125,16 +124,18 @@
         "@typescript-eslint/no-unsafe-declaration-merging": "error",                                    // recommended
         "@typescript-eslint/no-unsafe-enum-comparison": "error",                                        // recommended
         // "@typescript-eslint/no-unsafe-member-access": "error",                                       // recommended
+        "@typescript-eslint/no-unsafe-unary-minus": "error",
         // "@typescript-eslint/no-unsafe-return": "error",                                              // recommended
         "@typescript-eslint/no-useless-empty-export": "warn",
         "@typescript-eslint/no-var-requires": "error",                                                  // recommended
         "@typescript-eslint/non-nullable-type-assertion-style": "warn",
         "@typescript-eslint/parameter-properties": ["warn", {"prefer": "parameter-property"}],
         "@typescript-eslint/prefer-as-const": "error",                                                  // recommended
+        "@typescript-eslint/prefer-destructuring": "warn",
         "@typescript-eslint/prefer-enum-initializers": "warn",
         "@typescript-eslint/prefer-for-of": "warn",
         "@typescript-eslint/prefer-function-type": "warn",
-        "@typescript-eslint/prefer-includes": "warn",
+        // "@typescript-eslint/prefer-includes": "warn",
         "@typescript-eslint/prefer-literal-enum-member": "warn",
         "@typescript-eslint/prefer-namespace-keyword": "error",
         "@typescript-eslint/prefer-nullish-coalescing": "warn",
@@ -154,7 +155,6 @@
         "@typescript-eslint/strict-boolean-expressions": "warn",
         "@typescript-eslint/switch-exhaustiveness-check": "warn",
         "@typescript-eslint/triple-slash-reference": "error",                                           // recommended
-        "@typescript-eslint/type-annotation-spacing": "warn",
         // "@typescript-eslint/typedef": "warn",
         "@typescript-eslint/unbound-method": ["error", {"ignoreStatic": true}],                         // recommended
         "@typescript-eslint/unified-signatures": "warn",
@@ -165,25 +165,13 @@
          * @see: https://typescript-eslint.io/rules/#extension-rules
          */
 
-        "@typescript-eslint/block-spacing": "warn",
-        "@typescript-eslint/brace-style": "warn",
         // "@typescript-eslint/class-methods-use-this": "warn",
-        "@typescript-eslint/comma-dangle": "warn",
-        "@typescript-eslint/comma-spacing": "warn",
         "@typescript-eslint/default-param-last": "error",
         "@typescript-eslint/dot-notation": ["error", {"allowIndexSignaturePropertyAccess": true}],
-        "@typescript-eslint/func-call-spacing": "warn",
-        // "@typescript-eslint/indent": "warn",
         // "@typescript-eslint/init-declarations": "warn",
-        "@typescript-eslint/key-spacing": "warn",
-        "@typescript-eslint/keyword-spacing": "warn",
-        // "@typescript-eslint/lines-around-comment": "warn",
-        // "@typescript-eslint/lines-between-class-members": "warn",
         "@typescript-eslint/no-array-constructor": "error",                                             // recommended
         "@typescript-eslint/no-dupe-class-members": "warn",
         // "@typescript-eslint/no-empty-function": "error",
-        // "@typescript-eslint/no-extra-parens": "warn",
-        "@typescript-eslint/no-extra-semi": "error",
         "@typescript-eslint/no-implied-eval": "error",                                                  // recommended
         "@typescript-eslint/no-invalid-this": "warn",
         "@typescript-eslint/no-loop-func": "warn",
@@ -194,18 +182,11 @@
         "@typescript-eslint/no-shadow": "warn",
         "@typescript-eslint/no-throw-literal": "warn",
         "@typescript-eslint/no-unused-expressions": "warn",
-        "@typescript-eslint/no-unused-vars": ["warn", {"args": "none"}],                                // recommended
+        // "@typescript-eslint/no-unused-vars": ["warn", {"args": "none"}],                             // recommended
         "@typescript-eslint/no-use-before-define": "warn",
         "@typescript-eslint/no-useless-constructor": "warn",
-        // "@typescript-eslint/object-curly-spacing": "warn",
-        // "@typescript-eslint/padding-line-between-statements": "warn",
-        "@typescript-eslint/quotes": ["warn", "single"],
         "@typescript-eslint/require-await": "error",                                                    // recommended
         "@typescript-eslint/return-await": "error",
-        "@typescript-eslint/semi": "warn",
-        "@typescript-eslint/space-before-blocks": "warn",
-        "@typescript-eslint/space-before-function-paren": ["warn", "never"],
-        "@typescript-eslint/space-infix-ops": "warn",
 
         /**
          * eslint
@@ -317,7 +298,6 @@
         // "no-bitwise": "error",
         "no-caller": "error",
         "no-case-declarations": "error",                                                                // recommended
-        // "no-confusing-arrow": "error",
         // "no-console": "error",
         // "no-continue": "error",
         "no-delete-var": "error",                                                                       // recommended
@@ -332,10 +312,8 @@
         "no-extra-bind": "error",
         "no-extra-boolean-cast": "error",                                                               // recommended
         "no-extra-label": "error",
-        // "no-extra-semi": "error", EXTENDED                                                           // recommended
-        "no-floating-decimal": "error",
         "no-global-assign": "error",                                                                    // recommended
-        "no-implicit-coercion": ["error", { "allow": ["!!", "+"] }],
+        "no-implicit-coercion": ["error", {"allow": ["!!", "+"]}],
         // "no-implicit-globals": "error",
         // "no-implied-eval": "error", EXTENDED
         // "no-inline-comments": "warn",
@@ -347,16 +325,15 @@
         "no-lonely-if": "warn",
         // "no-loop-func": "warn", EXTENDED
         // "no-magic-numbers": "warn", EXTENDED
-        // "no-mixed-operators": "error",
         // "no-multi-assign": "error",
         "no-multi-str": "error",
         // "no-negated-condition": "warn",
         // "no-nested-ternary": "warn",
         "no-new": "error",
         "no-new-func": "error",
-        "no-new-object": "error",
         "no-new-wrappers": "error",
         "no-nonoctal-decimal-escape": "error",                                                          // recommended
+        "no-object-constructor": "error",
         "no-octal": "error",                                                                            // recommended
         "no-octal-escape": "error",
         // "no-param-reassign": "error",
@@ -396,11 +373,10 @@
         "no-with": "error",                                                                             // recommended
         // "object-shorthand": "error",
         // "one-var": "error",
-        // "one-var-declaration-per-line": "error",
         // "operator-assignment": "error",
         // "prefer-arrow-callback": "error",
         "prefer-const": "warn",
-        // "prefer-destructuring": "warn",
+        // "prefer-destructuring": "warn", EXTENDED
         // "prefer-exponentiation-operator": "warn",
         // "prefer-named-capture-group": "warn",
         // "prefer-numeric-literals": "warn",
@@ -411,7 +387,6 @@
         "prefer-rest-params": "warn",
         "prefer-spread": "warn",
         // "prefer-template": "warn",
-        "quote-props": ["warn", "as-needed"],
         // "radix": "warn",
         // "require-await": "error", EXTENDED
         // "require-unicode-regexp": "error",
@@ -419,7 +394,6 @@
         // "sort-imports": "warn",
         // "sort-keys": "warn",
         // "sort-vars": "warn",
-        // "spaced-comment": "warn",
         // "strict": "error",
         // "symbol-description": "warn",
         // "vars-on-top": "warn",
@@ -431,68 +405,102 @@
          * @see: https://eslint.org/docs/latest/rules/#layout--formatting
          */
 
-        // "array-bracket-newline": "warn",
-        "array-bracket-spacing": "warn",
-        // "array-element-newline": "warn",
-        "arrow-parens": ["warn", "as-needed"],
-        "arrow-spacing": "warn",
-        // "block-spacing": "warn", EXTENDED
-        // "brace-style": "warn", EXTENDED
-        // "comma-dangle": "warn", EXTENDED
-        // "comma-spacing": "warn", EXTENDED
-        "comma-style": "warn",
-        "computed-property-spacing": "warn",
-        "dot-location": ["warn", "property"],
-        "eol-last": "warn",
-        // "func-call-spacing": "warn", EXTENDED
-        // "function-call-argument-newline": "warn",
-        // "function-paren-newline": "warn",
-        // "generator-star-spacing": "warn",
-        // "implicit-arrow-linebreak": "warn",
-        // "indent": "warn", EXTENDED
-        // "jsx-quotes": "warn",
-        // "key-spacing": "warn", EXTENDED
-        // "keyword-spacing": "warn", EXTENDED
         // "line-comment-position": "warn",
-        "linebreak-style": "warn",
-        // "lines-around-comment" : "warn", EXTENDED
-        // "lines-between-class-members": "warn", EXTENDED
-        // "max-len": "warn",
-        // "max-statements-per-line": "warn",
-        // "multiline-ternary": "warn",
-        "new-parens": "warn",
-        // "newline-per-chained-call": "warn",
-        // "no-extra-parens": "warn",
-        "no-mixed-spaces-and-tabs": "error",                                                            // recommended
-        // "no-multi-spaces": "warn",
-        // "no-multiple-empty-lines": "warn",
-        "no-tabs": "error",
-        // "no-trailing-spaces": "warn", REMARK: USE TRAILING SPACES EXTENSION
-        "no-whitespace-before-property": "warn",
-        // "nonblock-statement-body-position": "warn",
-        // "object-curly-newline": "warn",
-        // "object-curly-spacing": "warn", EXTENDED
-        // "object-property-newline": "warn",
-        // "operator-linebreak": "warn",
-        // "padded-blocks": "warn",
-        // "padding-line-between-statements": "warn", EXTENDED
-        // "quotes": ["warn", "single"], EXTENDED
-        "rest-spread-spacing": "warn",
-        // "semi": "warn", EXTENDED
-        "semi-spacing": "warn",
-        "semi-style": "warn",
-        // "space-before-blocks": "warn", EXTENDED
-        // "space-before-function-paren": ["warn", "never"], EXTENDED
-        "space-in-parens": "warn",
-        // "space-infix-ops": "warn", EXTENDED
-        "space-unary-ops": "warn",
-        "switch-colon-spacing": "warn",
-        "template-curly-spacing": "warn",
-        "template-tag-spacing": "warn",
         "unicode-bom": "error",
-        "wrap-iife": "warn",
-        // "wrap-regex": "warn",
-        // "yield-star-spacing": "warn",
+
+        /**
+         * stylistic
+         * @description: rules handling style rather than code correctness
+         * @see: https://eslint.style/packages/default
+         */
+
+        // "@stylistic/array-bracket-newline": "warn",
+        "@stylistic/array-bracket-spacing": "warn",
+        // "@stylistic/array-element-newline": "warn",
+        "@stylistic/arrow-parens": ["warn", "as-needed"],
+        "@stylistic/arrow-spacing": "warn",
+        "@stylistic/block-spacing": "warn",
+        "@stylistic/brace-style": "warn",
+        "@stylistic/comma-dangle": "warn",
+        "@stylistic/comma-spacing": "warn",
+        "@stylistic/comma-style": "warn",
+        "@stylistic/computed-property-spacing": "warn",
+        "@stylistic/dot-location": ["warn", "property"],
+        "@stylistic/eol-last": "warn",
+        // "@stylistic/function-call-argument-newline": "warn",
+        "@stylistic/function-call-spacing": "warn",
+        // "@stylistic/function-paren-newline": "warn",
+        // "@stylistic/generator-star-spacing": "warn",
+        // "@stylistic/implicit-arrow-linebreak": "warn",
+        // "@stylistic/indent": "warn",
+        // "@stylistic/jsx-quotes": "warn",
+        "@stylistic/key-spacing": "warn",
+        "@stylistic/keyword-spacing": "warn",
+        "@stylistic/linebreak-style": "warn",
+        // "@stylistic/lines-around-comment": "warn",
+        // "@stylistic/lines-between-class-members": "warn",
+        // "@stylistic/max-len": "warn",
+        // "@stylistic/max-statements-per-line": "warn",
+        // "@stylistic/multiline-ternary": "warn",
+        "@stylistic/new-parens": "warn",
+        // "@stylistic/newline-per-chained-call": "warn",
+        // "@stylistic/no-confusing-arrow": "error",
+        // "@stylistic/no-extra-parens": "warn",
+        "@stylistic/no-extra-semi": "error",
+        "@stylistic/no-floating-decimal": "error",
+        // "@stylistic/no-mixed-operators": "error",
+        "@stylistic/no-mixed-spaces-and-tabs": "error",                                                            // recommended
+        // "@stylistic/no-multi-spaces": "warn",
+        // "@stylistic/no-multiple-empty-lines": "warn",
+        "@stylistic/no-tabs": "error",
+        // "@stylistic/no-trailing-spaces": "warn", REMARK: USE TRAILING SPACES EXTENSION
+        "@stylistic/no-whitespace-before-property": "warn",
+        // "@stylistic/nonblock-statement-body-position": "warn",
+        // "@stylistic/object-curly-newline": "warn",
+        // "@stylistic/object-curly-spacing": "warn",
+        // "@stylistic/object-property-newline": "warn",
+        // "@stylistic/one-var-declaration-per-line": "error",
+        // "@stylistic/operator-linebreak": "warn",
+        // "@stylistic/padded-blocks": "warn",
+        // "@stylistic/padding-line-between-statements": "warn",
+        "@stylistic/quote-props": ["warn", "as-needed"],
+        "@stylistic/quotes": ["warn", "single"],
+        "@stylistic/rest-spread-spacing": "warn",
+        "@stylistic/semi": "warn",
+        "@stylistic/semi-spacing": "warn",
+        "@stylistic/semi-style": "warn",
+        "@stylistic/space-before-blocks": "warn",
+        "@stylistic/space-before-function-paren": ["warn", "never"],
+        "@stylistic/space-in-parens": "warn",
+        "@stylistic/space-infix-ops": "warn",
+        "@stylistic/space-unary-ops": "warn",
+        // "@stylistic/spaced-comment": "warn",
+        "@stylistic/switch-colon-spacing": "warn",
+        "@stylistic/template-curly-spacing": "warn",
+        "@stylistic/template-tag-spacing": "warn",
+        "@stylistic/wrap-iife": "warn",
+        // "@stylistic/wrap-regex": "warn",
+        // "@stylistic/yield-star-spacing": "warn",
+        "@stylistic/member-delimiter-style": "warn",
+        "@stylistic/type-annotation-spacing": "warn",
+        "@stylistic/jsx-child-element-spacing": "warn",
+        "@stylistic/jsx-closing-bracket-location": "warn",
+        "@stylistic/jsx-closing-tag-location": "warn",
+        "@stylistic/jsx-curly-brace-presence": ["error", {"propElementValues": "always"}],
+        "@stylistic/jsx-curly-newline": "warn",
+        // "@stylistic/jsx-curly-spacing": "warn",
+        "@stylistic/jsx-equals-spacing": "warn",
+        // "@stylistic/jsx-first-prop-new-line": "warn",
+        // "@stylistic/jsx-indent": "warn",
+        // "@stylistic/jsx-indent-props": "warn",
+        // "@stylistic/jsx-max-props-per-line": "warn",
+        // "@stylistic/jsx-newline": "warn",
+        // "@stylistic/jsx-one-expression-per-line": "warn",
+        // "@stylistic/jsx-props-no-multi-spaces": "warn",
+        "@stylistic/jsx-self-closing-comp": "warn",
+        // "@stylistic/jsx-sort-props": "warn",
+        "@stylistic/jsx-tag-spacing": "warn",
+        // "@stylistic/jsx-wrap-multilines": "warn",
 
         /**
          * last

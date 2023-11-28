@@ -38,10 +38,11 @@ Add the following ```devDependencies``` to the ```package.json``` file. The spec
 __Hint:__ After updating these versions, make sure to run ```npm install``` and restart VS Code for eslint to pick any rule changes.
 
 ```json
-"@typescript-eslint/eslint-plugin": "6.5.0",
-"@typescript-eslint/parser": "6.5.0",
-"eslint": "8.48.0",
-"eslint-plugin-jsdoc": "46.5.0",
+"@stylistic/eslint-plugin": "1.4.1",
+"@typescript-eslint/eslint-plugin": "6.13.1",
+"@typescript-eslint/parser": "6.13.1",
+"eslint": "8.54.0",
+"eslint-plugin-jsdoc": "46.9.0",
 ```
 
 ### ESLint and TSConfig
@@ -62,6 +63,7 @@ In the root of the typescript project,
         "project": "tsconfig.json"
     },
     "plugins": [
+        "@stylistic",
         "@typescript-eslint",
         "eslint-plugin-jsdoc"
     ],
@@ -90,7 +92,7 @@ In the root of the typescript project,
     "noImplicitThis": true,
     // "useUnknownInCatchVariables": true,
     "alwaysStrict": true,
-    "noUnusedLocals": true,
+    // "noUnusedLocals": true,
     // "noUnusedParameters": true,
     "exactOptionalPropertyTypes": true,
     "noImplicitReturns": true,
