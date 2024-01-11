@@ -132,7 +132,7 @@
         "@typescript-eslint/parameter-properties": ["warn", {"prefer": "parameter-property"}],
         "@typescript-eslint/prefer-as-const": "error",                                                  // recommended
         "@typescript-eslint/prefer-destructuring": "warn",
-        "@typescript-eslint/prefer-enum-initializers": "warn",
+        "@typescript-eslint/prefer-enum-initializers": ["warn", {"allowBitwiseExpressions": true}],
         "@typescript-eslint/prefer-for-of": "warn",
         "@typescript-eslint/prefer-function-type": "warn",
         // "@typescript-eslint/prefer-includes": "warn",
@@ -145,7 +145,7 @@
         "@typescript-eslint/prefer-reduce-type-parameter": "warn",
         "@typescript-eslint/prefer-regexp-exec": "warn",
         "@typescript-eslint/prefer-return-this-type": "warn",
-        "@typescript-eslint/prefer-string-starts-ends-with": "warn",
+        // "@typescript-eslint/prefer-string-starts-ends-with": "warn",
         "@typescript-eslint/prefer-ts-expect-error": "warn",
         "@typescript-eslint/promise-function-async": "warn",
         "@typescript-eslint/require-array-sort-compare": "warn",
@@ -178,11 +178,11 @@
         "@typescript-eslint/no-loss-of-precision": "error",                                             // recommended
         // "@typescript-eslint/no-magic-numbers": "warn",
         "@typescript-eslint/no-redeclare": "warn",
-        // "@typescript-eslint/no-restricted-imports": ["error", "forbidden"],
+        // "@typescript-eslint/no-restricted-imports": "error",
         "@typescript-eslint/no-shadow": "warn",
         "@typescript-eslint/no-throw-literal": "warn",
         "@typescript-eslint/no-unused-expressions": "warn",
-        // "@typescript-eslint/no-unused-vars": ["warn", {"args": "none"}],                             // recommended
+        // "@typescript-eslint/no-unused-vars": "warn",                                                 // recommended
         "@typescript-eslint/no-use-before-define": "warn",
         "@typescript-eslint/no-useless-constructor": "warn",
         "@typescript-eslint/require-await": "error",                                                    // recommended
@@ -246,7 +246,7 @@
         "no-unsafe-negation": "error",                                                                  // recommended
         "no-unsafe-optional-chaining": ["error", {"disallowArithmeticOperators": true}],                // recommended
         "no-unused-private-class-members": "warn",
-        // "no-unused-vars": ["warn", {"args": "none"}], EXTENDED                                       // recommended
+        // "no-unused-vars": "warn", EXTENDED                                                           // recommended
         // "no-use-before-define": "warn", EXTENDED
         "no-useless-backreference": "warn",                                                             // recommended
         "require-atomic-updates": "warn",
@@ -265,7 +265,7 @@
         // "camelcase": "warn",
         // "capitalized-comments": "warn",
         // "class-methods-use-this": "warn", EXTENDED
-        // "complexity": "[warn, 2]",
+        // "complexity": "warn",
         // "consistent-return": "warn",
         // "consistent-this": "warn",
         "curly": "error",
@@ -279,9 +279,9 @@
         // "func-style": "warn",
         "grouped-accessor-pairs": ["warn", "getBeforeSet"],
         "guard-for-in": "error",
-        // "id-denylist": ["error", "data", "callback"],
+        // "id-denylist": "error",
         // "id-length": "error",
-        // "id-match": ["error", "^[a-z]+([A-Z][a-z]+)*$"],
+        // "id-match": "error",
         // "init-declarations": "warn", EXTENDED
         // "logical-assignment-operators": "warn",
         // "max-classes-per-file": "warn",
@@ -343,10 +343,10 @@
         "no-regex-spaces": "warn",                                                                      // recommended
         // "no-restricted-exports": "error",
         // "no-restricted-globals": "error",
-        // "no-restricted-imports": ["error", "forbidden"], EXTENDED
+        // "no-restricted-imports": "error", EXTENDED
         // "no-restricted-properties": "warn",
         // "no-restricted-syntax": "error",
-        "no-return-assign": "error",
+        // "no-return-assign": "error",
         "no-script-url": "error",
         // "no-sequences": "error",
         // "no-shadow": "warn", EXTENDED
@@ -449,7 +449,7 @@
         "@stylistic/no-extra-semi": "error",
         "@stylistic/no-floating-decimal": "error",
         // "@stylistic/no-mixed-operators": "error",
-        "@stylistic/no-mixed-spaces-and-tabs": "error",                                                            // recommended
+        "@stylistic/no-mixed-spaces-and-tabs": "error",                                                 // recommended
         // "@stylistic/no-multi-spaces": "warn",
         // "@stylistic/no-multiple-empty-lines": "warn",
         "@stylistic/no-tabs": "error",
