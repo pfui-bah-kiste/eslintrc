@@ -107,7 +107,7 @@
         "@typescript-eslint/no-namespace": "error",                                                     // recommended
         "@typescript-eslint/no-non-null-asserted-nullish-coalescing": "warn",
         "@typescript-eslint/no-non-null-asserted-optional-chain": "error",                              // recommended
-        "@typescript-eslint/no-non-null-assertion": "error",
+        // "@typescript-eslint/no-non-null-assertion": "error",
         "@typescript-eslint/no-redundant-type-constituents": "warn",                                    // recommended
         "@typescript-eslint/no-require-imports": "warn",
         "@typescript-eslint/no-this-alias": "error",                                                    // recommended
@@ -132,11 +132,11 @@
         "@typescript-eslint/parameter-properties": ["warn", {"prefer": "parameter-property"}],
         "@typescript-eslint/prefer-as-const": "error",                                                  // recommended
         "@typescript-eslint/prefer-destructuring": "warn",
-        "@typescript-eslint/prefer-enum-initializers": ["warn", {"allowBitwiseExpressions": true}],
+        "@typescript-eslint/prefer-enum-initializers": "warn",
         "@typescript-eslint/prefer-for-of": "warn",
         "@typescript-eslint/prefer-function-type": "warn",
         // "@typescript-eslint/prefer-includes": "warn",
-        "@typescript-eslint/prefer-literal-enum-member": "warn",
+        // "@typescript-eslint/prefer-literal-enum-member": "warn",
         "@typescript-eslint/prefer-namespace-keyword": "error",
         "@typescript-eslint/prefer-nullish-coalescing": "warn",
         "@typescript-eslint/prefer-optional-chain": "warn",
